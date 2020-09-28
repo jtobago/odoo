@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="repairing_type_form_view" model="ir.ui.view">
+            <field name="name">repairing.type.form</field>
+            <field name="model">repairing.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="assigned_person"/>
+                            </group>
+                            <group>
+                                <field name="amount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="repairing_type_tree_view" model="ir.ui.view">
+            <field name="name">repairing.type.tree</field>
+            <field name="model">repairing.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="assigned_person"/>
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_repairing_type" model="ir.actions.act_window">
+            <field name="name">Repairing Type</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">repairing.type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="repairing_work_form_view" model="ir.ui.view">
+            <field name="name">repairing.work.form</field>
+            <field name="model">repairing.work</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="assigned_person"/>
+                            </group>
+                            <group>
+                                <field name="amount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="repairing_work_tree_view" model="ir.ui.view">
+            <field name="name">repairing.work.tree</field>
+            <field name="model">repairing.work</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="assigned_person"/>
+                    <field name="amount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_repairing_work" model="ir.actions.act_window">
+            <field name="name">Additional Works</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">repairing.work</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="tobago_config_menu" name="Configuration" parent="tbg_service_menu" sequence="3"/>
+        <menuitem id="tobago_customer" name="Customers" parent="tobago_config_menu" action="base.action_partner_customer_form" sequence="1"/>
+        <menuitem id="tobago_products" name="Products" parent="tobago_config_menu" action="product.product_normal_action_sell" sequence="2"/>
+        <menuitem id="tobago_repairing_type" name="Repairing Type" parent="tobago_config_menu" action="action_repairing_type" sequence="3"/>
+        <menuitem id="tobago_repairing_work" name="Additional Works" parent="tobago_config_menu" action="action_repairing_work" sequence="4"/>
+
+    </data>
+</odoo>

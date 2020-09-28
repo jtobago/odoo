@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+         <record id="view_report_tobago_order" model="ir.ui.view">
+            <field name="name">report.tobago.order.pivot</field>
+            <field name="model">report.tobago.order</field>
+            <field name="arch" type="xml">
+                <pivot string="Tobago Order Analysis" display_quantity="true" disable_linking="True">
+                     <field name="name" type="row"/>
+                 </pivot>
+             </field>
+        </record>
+
+        <record id="action_tobago_order_analysis" model="ir.actions.act_window">
+            <field name="name">Tobago Service Analysis</field>
+            <field name="res_model">report.tobago.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">pivot</field>
+            <field name="context">{'group_by_no_leaf':1,'group_by':[]}</field>
+            <field name="help">This report allows you to analyse the performance of your Tobago Mangement. </field>
+        </record>
+
+        <menuitem id="tobago_report_menu" name="Reports" parent="tbg_service_menu" sequence="2"/>
+        <menuitem name="Tobago Service Analysis" action="action_tobago_order_analysis" id="menu_tobago_order_analysis" parent="tobago_report_menu" sequence="1"/>
+
+    </data>
+</odoo>

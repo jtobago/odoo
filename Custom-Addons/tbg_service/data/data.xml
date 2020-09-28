@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="tobago_service" model="product.product">
+        <field name="name">Tobago Service</field>
+        <field name="type">service</field>
+    </record>
+</odoo>
