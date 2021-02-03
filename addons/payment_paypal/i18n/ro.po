@@ -6,6 +6,7 @@
 # Martin Trigaux, 2018
 # Dorin Hongu <dhongu@gmail.com>, 2018
 # Cozmin Candea <office@terrabit.ro>, 2020
+# Hongu Cosmin <cosmin513@gmail.com>, 2020
 # Foldi Robert <foldirobert@nexterp.ro>, 2020
 # 
 msgid ""
@@ -60,7 +61,7 @@ msgstr "Taxe internaționale fixe"
 #. module: payment_paypal
 #: model_terms:ir.ui.view,arch_db:payment_paypal.acquirer_form_paypal
 msgid "How to configure your paypal account?"
-msgstr ""
+msgstr "Cum vă configurați contul de paypal?"
 
 #. module: payment_paypal
 #: selection:payment.acquirer,provider:0
@@ -123,7 +124,7 @@ msgstr "Paypal PDT Token"
 #: code:addons/payment_paypal/models/payment.py:138
 #, python-format
 msgid "Paypal: received data with missing reference (%s) or txn_id (%s)"
-msgstr ""
+msgstr "Paypal: date primite cu referință lipsă (%s) sau txn_id (%s)"
 
 #. module: payment_paypal
 #: model:ir.model.fields,field_description:payment_paypal.field_payment_acquirer__provider
@@ -175,12 +176,12 @@ msgstr ""
 #. module: payment_paypal
 #: model:ir.model.fields,field_description:payment_paypal.field_payment_acquirer__fees_dom_var
 msgid "Variable domestic fees (in percents)"
-msgstr ""
+msgstr "Taxe interne variabile (în procente)"
 
 #. module: payment_paypal
 #: model:ir.model.fields,field_description:payment_paypal.field_payment_acquirer__fees_int_var
 msgid "Variable international fees (in percents)"
-msgstr ""
+msgstr "Taxe internaționale variabile (în procente)"
 
 #. module: payment_paypal
 #: selection:payment.acquirer,provider:0
