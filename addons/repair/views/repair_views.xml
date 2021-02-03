@@ -45,7 +45,7 @@
                             groups="account.group_account_invoice">
                         </button>
                     </div>
-                    <label for="name"/>
+<!--                    <label for="name"/>-->
                     <h1>
                         <field name="name"/>
                     </h1>
