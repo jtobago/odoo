@@ -232,7 +232,7 @@ ListRenderer.include({
                     currentWidget = self.allFieldWidgets[currentRowID][self.currentFieldIndex];
                     if (currentWidget) {
                         focusedElement = currentWidget.getFocusableElement().get(0);
-                        if (selectionRange) {
+                        if (selectionRange && currentWidget.formatType !== 'integer') {
                             dom.setSelectionRange(focusedElement, selectionRange);
                         }
                     }
